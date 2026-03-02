@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Anil-G3.github.io/TaskBuddy",
+  "homepage": "https://Anil-G3.github.io/PlanPilot",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
