@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import TaskForm from './Components/TaskForm';
 import TaskList from './Components/TaskList';
 import ProgressTracker from './Components/ProgressTracker';
+import './App.css';
 
 export default function App() {
   // Load tasks from localStorage on startup, otherwise start with empty array
@@ -16,7 +17,7 @@ export default function App() {
   }, [tasks]);
 
   const addTask = (task) => {
-    settasks([...tasks, task]);
+    settasks(prevTasks => [...prevTasks, task]);
   };
 
   const updateTask = (updatedTask, index) => {
@@ -38,8 +39,8 @@ export default function App() {
   return (
     <div className='App'>
       <header>
-        <h1 className='title'>TaskBuddy</h1>
-        <p className='tagline'>Your friendly Task Manager</p>
+        <h1 className='title'>PlanPilot</h1>
+        <p className='tagline'>Ideas in. Actions out.</p>
       </header>
       
       <TaskForm addTask={addTask} />

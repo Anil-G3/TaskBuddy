@@ -9,6 +9,13 @@ export default function TaskList({tasks, updateTask, deleteTask}) {
 
   return (
     <div>
+       {tasks.length === 0 && (
+        <div className="empty-state">
+          <span className="empty-icon">✦</span>
+          <p>Nothing here yet.</p>
+          <small>Add your first task above.</small>
+        </div>
+      )}
       <ul>
         {tasks.map((task, index) => (
           <li key={index} className={task.completed ? 'completed' : ''}>
